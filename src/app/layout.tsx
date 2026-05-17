@@ -54,6 +54,9 @@ export const metadata: Metadata = {
       "Live clock, world clock, timer, stopwatch, and alarm clock in one fast web app.",
   },
   manifest: "/manifest.webmanifest",
+  other: {
+    "google-adsense-account": "ca-pub-9427809665187984",
+  },
   icons: {
     icon: [
       { url: "/logo.png", type: "image/png" },

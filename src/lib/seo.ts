@@ -25,11 +25,27 @@ export function pageMetadata({
       url,
       siteName: "vClock",
       type: "website",
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: `${title} on vClock`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [
+        {
+          url: "/twitter-image",
+          width: 1200,
+          height: 630,
+          alt: `${title} on vClock`,
+        },
+      ],
     },
   };
 }
@@ -58,4 +74,3 @@ export function breadcrumbJsonLd(items: { name: string; url: string }[]) {
     })),
   };
 }
-

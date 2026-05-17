@@ -38,7 +38,7 @@ export default function Home() {
                 <CardContent className="grid gap-4 p-5">
                   <tool.icon className="text-accent" size={24} />
                   <div>
-                    <h2 className="text-xl font-semibold">{tool.title}</h2>
+                    <h3 className="text-xl font-semibold">{tool.title}</h3>
                     <p className="mt-2 text-sm leading-6 text-muted-foreground">{tool.desc}</p>
                   </div>
                 </CardContent>
@@ -46,6 +46,43 @@ export default function Home() {
             </Link>
           ))}
         </div>
+        <section className="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <h2 className="text-2xl font-semibold">Online clock tools for every routine</h2>
+            <p className="mt-4 leading-7 text-muted-foreground">
+              vClock brings the essentials of timekeeping into one fast web app:
+              a live digital clock, world clock comparisons, a countdown timer,
+              a precise stopwatch, and browser alarms. It is built for quick
+              checks during work, study, travel planning, workouts, cooking, and
+              meetings across time zones.
+            </p>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-3">
+            <article>
+              <h3 className="font-semibold">Current time at a glance</h3>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                The live clock shows your local time with the date, weekday,
+                timezone, and a fullscreen display for desks, classrooms, and
+                shared screens.
+              </p>
+            </article>
+            <article>
+              <h3 className="font-semibold">Timers and alarms that stay simple</h3>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                Start countdowns from common presets, save browser alarms with
+                labels, and keep focus on the task instead of configuring a
+                heavy scheduling app.
+              </p>
+            </article>
+            <article>
+              <h3 className="font-semibold">World clocks for planning</h3>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                Compare cities and countries before calls, releases, trips, or
+                events so it is clear what time it is for every participant.
+              </p>
+            </article>
+          </div>
+        </section>
         <AdsenseUnit className="mt-8 min-h-28 sm:min-h-36" label="Homepage bottom advertisement" />
       </div>
     </section>

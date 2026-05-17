@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { PwaRegister } from "@/components/pwa-register";
@@ -21,11 +20,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://vclock.tech"),
   applicationName: "vClock",
   title: {
-    default: "vClock - Online Clock, Timer, Stopwatch, Alarm and World Clock",
+    default: "vClock - Online Clock, Timer, Stopwatch and Alarms",
     template: "%s | vClock",
   },
   description:
-    "vClock is a fast, mobile-friendly clock utility with live time, world clocks, online timer, stopwatch, and browser alarms.",
+    "Use vClock for live time, world clocks, countdown timers, stopwatch laps, and browser alarms in a fast, mobile-friendly web app for daily use.",
   keywords: [
     "online clock",
     "live clock",
@@ -46,12 +45,28 @@ export const metadata: Metadata = {
     title: "vClock - Fast Online Time Tools",
     description:
       "A clean, ultra-fast clock utility for live time, world clocks, timers, stopwatch, and alarms.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "vClock online clock, timer, stopwatch, alarm, and world clock tools",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "vClock - Fast Online Time Tools",
     description:
       "Live clock, world clock, timer, stopwatch, and alarm clock in one fast web app.",
+    images: [
+      {
+        url: "/twitter-image",
+        width: 1200,
+        height: 630,
+        alt: "vClock online time tools preview",
+      },
+    ],
   },
   manifest: "/manifest.webmanifest",
   other: {
@@ -77,12 +92,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-full bg-background text-foreground antialiased`}
       >
-        <Script
-          async
-          crossOrigin="anonymous"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9427809665187984"
-          strategy="afterInteractive"
-        />
         <ThemeProvider>
           <Navbar />
           <main className="flex-1">{children}</main>

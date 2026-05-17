@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { PwaRegister } from "@/components/pwa-register";
@@ -73,6 +74,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-full bg-background text-foreground antialiased`}
       >
+        <Script
+          async
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9427809665187984"
+          strategy="afterInteractive"
+        />
         <ThemeProvider>
           <Navbar />
           <main className="flex-1">{children}</main>

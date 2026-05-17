@@ -1,8 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactCompiler: true,
+  async redirects() {
+    return [
+      { source: "/time-now", destination: "/clock", permanent: true },
+      { source: "/online-timer", destination: "/timer", permanent: true },
+      { source: "/online-stopwatch", destination: "/stopwatch", permanent: true },
+      { source: "/online-alarm-clock", destination: "/alarm-clock", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

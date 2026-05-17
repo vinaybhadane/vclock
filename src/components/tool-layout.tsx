@@ -1,4 +1,4 @@
-import { AdSlot } from "@/components/ad-slot";
+import { AdsenseUnit } from "@/components/adsense-unit";
 
 export function ToolLayout({
   children,
@@ -18,17 +18,18 @@ export function ToolLayout({
             <h1 className="mt-2 text-3xl font-semibold tracking-normal sm:text-5xl">{title}</h1>
             <p className="mt-4 text-base leading-7 text-muted-foreground">{description}</p>
           </div>
+          <AdsenseUnit className="mb-6 min-h-24 sm:min-h-28 lg:hidden" label="Mobile top advertisement" />
           {children}
-          <AdSlot className="mt-8" label="In-content advertisement" />
+          <AdsenseUnit className="mt-8 min-h-32 sm:min-h-40" label="In-content advertisement" />
+          <AdsenseUnit className="mt-6 min-h-24 sm:min-h-32 lg:hidden" label="Mobile bottom advertisement" />
         </div>
         <div className="hidden lg:block">
           <div className="sticky top-24 grid gap-4">
-            <AdSlot className="min-h-72" label="Sidebar advertisement" />
-            <AdSlot className="min-h-56" label="Sponsored space" />
+            <AdsenseUnit className="min-h-72" label="Sidebar advertisement" />
+            <AdsenseUnit className="min-h-56" label="Desktop sponsored space" />
           </div>
         </div>
       </div>
     </section>
   );
 }
-

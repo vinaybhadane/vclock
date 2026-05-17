@@ -1,4 +1,4 @@
-import { AdSlot } from "@/components/ad-slot";
+import { AdsenseUnit } from "@/components/adsense-unit";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function InfoPage({ title, children }: { title: string; children: React.ReactNode }) {
@@ -11,9 +11,9 @@ export function InfoPage({ title, children }: { title: string; children: React.R
             <div className="grid gap-4 leading-7">{children}</div>
           </CardContent>
         </Card>
-        <AdSlot className="hidden min-h-72 lg:flex" label="Sidebar advertisement" />
+        <AdsenseUnit className="min-h-28 lg:hidden" label="Mobile advertisement" />
+        <AdsenseUnit className="hidden min-h-72 lg:block" label="Sidebar advertisement" />
       </div>
     </section>
   );
 }
-

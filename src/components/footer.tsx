@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AdSlot } from "@/components/ad-slot";
+import { AdsenseUnit } from "@/components/adsense-unit";
 
 const links = [
   ["About Us", "/about-us"],
@@ -15,7 +15,7 @@ export function Footer() {
   return (
     <footer className="mt-16 border-t border-border bg-card/50">
       <div className="page-shell grid gap-8 py-10">
-        <AdSlot label="Footer advertisement" />
+        <AdsenseUnit className="min-h-28 sm:min-h-32" label="Footer advertisement" />
         <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
           <div>
             <p className="font-semibold">vClock</p>
@@ -35,4 +35,3 @@ export function Footer() {
     </footer>
   );
 }
-

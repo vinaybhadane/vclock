@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { AlarmClock, Clock3, Globe2, Timer, TimerReset } from "lucide-react";
-import { AdSlot } from "@/components/ad-slot";
+import { AdsenseUnit } from "@/components/adsense-unit";
 import { LiveClock } from "@/components/live-clock";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -29,7 +29,7 @@ export default function Home() {
         <div className="mt-8">
           <LiveClock />
         </div>
-        <AdSlot className="my-8" label="In-content advertisement" />
+        <AdsenseUnit className="my-8 min-h-28 sm:min-h-36" label="Homepage top advertisement" />
         <h2 className="mb-4 text-2xl font-semibold">More time tools</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {tools.map((tool) => (
@@ -46,6 +46,7 @@ export default function Home() {
             </Link>
           ))}
         </div>
+        <AdsenseUnit className="mt-8 min-h-28 sm:min-h-36" label="Homepage bottom advertisement" />
       </div>
     </section>
   );

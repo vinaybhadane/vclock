@@ -1,6 +1,6 @@
-import { WorldClock } from "@/components/world-clock";
 import { ToolLayout } from "@/components/tool-layout";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
+import { DynamicWorldClock } from "@/components/dynamic-loaders";
 
 export const metadata = pageMetadata({
   title: "World Clock - Global Time Zone Converter",
@@ -16,7 +16,7 @@ export default function WorldClockPage() {
         description="Add live clocks for major cities and countries, compare UTC offsets, and see day or night status at a glance."
         title="World Clock"
       >
-        <WorldClock />
+        <DynamicWorldClock />
       </ToolLayout>
       <script
         type="application/ld+json"

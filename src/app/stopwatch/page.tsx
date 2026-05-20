@@ -1,6 +1,6 @@
-import { Stopwatch } from "@/components/stopwatch";
 import { ToolLayout } from "@/components/tool-layout";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
+import { DynamicStopwatch } from "@/components/dynamic-loaders";
 
 export const metadata = pageMetadata({
   title: "Online Stopwatch - Precise Stopwatch With Laps",
@@ -16,7 +16,7 @@ export default function StopwatchPage() {
         description="Measure elapsed time with a fast stopwatch, lap list, fullscreen display, and simple keyboard controls."
         title="Online Stopwatch"
       >
-        <Stopwatch />
+        <DynamicStopwatch />
       </ToolLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([
         { question: "Does the stopwatch track laps?", answer: "Yes. Use the Lap button or the L key to save lap times." },

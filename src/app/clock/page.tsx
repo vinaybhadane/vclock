@@ -1,6 +1,6 @@
-import { LiveClock } from "@/components/live-clock";
 import { ToolLayout } from "@/components/tool-layout";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
+import { DynamicLiveClock } from "@/components/dynamic-loaders";
 
 export const metadata = pageMetadata({
   title: "Live Clock - Current Time Now",
@@ -20,7 +20,7 @@ export default function ClockPage() {
         description="Check the current time now with a large digital clock, today's date, weekday, timezone, and fullscreen mode."
         title="Live Clock"
       >
-        <LiveClock />
+        <DynamicLiveClock />
       </ToolLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <script

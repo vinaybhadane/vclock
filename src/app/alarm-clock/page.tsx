@@ -1,6 +1,6 @@
-import { AlarmClock } from "@/components/alarm-clock";
 import { ToolLayout } from "@/components/tool-layout";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
+import { DynamicAlarmClock } from "@/components/dynamic-loaders";
 
 export const metadata = pageMetadata({
   title: "Online Alarm Clock - Browser Alarm With Snooze",
@@ -16,7 +16,7 @@ export default function AlarmPage() {
         description="Set browser-based alarms that stay saved on your device, with labels, sound selection, notification support, and snooze."
         title="Alarm Clock"
       >
-        <AlarmClock />
+        <DynamicAlarmClock />
       </ToolLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([
         { question: "Are alarms saved?", answer: "Yes. Alarms are saved in your browser localStorage on the current device." },

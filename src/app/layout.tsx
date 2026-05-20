@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { PwaRegister } from "@/components/pwa-register";
@@ -9,30 +10,37 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
+
+export const viewport = {
+  themeColor: "#000000",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vclock.tech"),
   applicationName: "vClock",
   title: {
-    default: "vClock - Online Clock, Timer, Stopwatch and Alarms",
+    default: "vClock - Online Clock, Timer, Stopwatch & World Clock",
     template: "%s | vClock",
   },
   description:
-    "Use vClock for live time, world clocks, countdown timers, stopwatch laps, and browser alarms in a fast, mobile-friendly web app for daily use.",
+    "Free online clock, timer, stopwatch, alarm and world clock. Set browser alarms easily. Fast, accurate and perfect for daily time management.",
   keywords: [
     "online clock",
-    "live clock",
-    "world clock",
-    "online timer",
+    "timer",
     "stopwatch",
-    "alarm clock",
-    "time now",
+    "alarm",
+    "world clock",
+    "browser timer",
+    "digital clock",
+    "desktop timer",
   ],
   authors: [{ name: "vClock" }],
   creator: "vClock",
@@ -42,29 +50,29 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://vclock.tech",
     siteName: "vClock",
-    title: "vClock - Fast Online Time Tools",
+    title: "vClock - Online Clock, Timer, Stopwatch & World Clock",
     description:
-      "A clean, ultra-fast clock utility for live time, world clocks, timers, stopwatch, and alarms.",
+      "Free online clock, timer, stopwatch, alarm and world clock. Fast, accurate and perfect for daily time management.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "https://vclock.tech/og-image.png",
         width: 1200,
         height: 630,
-        alt: "vClock online clock, timer, stopwatch, alarm, and world clock tools",
+        alt: "vClock - Online Clock, Timer, Stopwatch & World Clock",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "vClock - Fast Online Time Tools",
+    title: "vClock - Online Clock, Timer, Stopwatch & World Clock",
     description:
-      "Live clock, world clock, timer, stopwatch, and alarm clock in one fast web app.",
+      "Free online clock, timer, stopwatch, alarm and world clock. Fast, accurate and perfect for daily time management.",
     images: [
       {
-        url: "/twitter-image",
+        url: "https://vclock.tech/og-image.png",
         width: 1200,
         height: 630,
-        alt: "vClock online time tools preview",
+        alt: "vClock - Online Clock, Timer, Stopwatch & World Clock preview",
       },
     ],
   },
@@ -74,9 +82,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
       { url: "/logo.png", type: "image/png" },
     ],
-    shortcut: "/logo.png",
+    shortcut: "/favicon.ico",
     apple: "/logo.png",
   },
   robots: { index: true, follow: true },
@@ -89,6 +98,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        <Script
+          async
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9427809665187984"
+          strategy="lazyOnload"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-full bg-background text-foreground antialiased`}
       >

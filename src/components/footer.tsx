@@ -2,6 +2,8 @@ import Link from "next/link";
 import { AdsenseUnit } from "@/components/adsense-unit";
 
 const links = [
+  ["Life Journey Clock", "/life-clock"],
+  ["Wish Complete Clock", "/wish-clock"],
   ["About Us", "/about-us"],
   ["Privacy Policy", "/privacy-policy"],
   ["Terms & Conditions", "/terms-and-conditions"],

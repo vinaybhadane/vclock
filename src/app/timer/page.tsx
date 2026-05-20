@@ -1,6 +1,6 @@
-import { OnlineTimer } from "@/components/online-timer";
 import { ToolLayout } from "@/components/tool-layout";
 import { breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
+import { DynamicOnlineTimer } from "@/components/dynamic-loaders";
 
 export const metadata = pageMetadata({
   title: "Online Timer - Free Countdown Timer",
@@ -16,7 +16,7 @@ export default function TimerPage() {
         description="Start a countdown in seconds with useful presets for focus, cooking, workouts, study sessions, and Pomodoro breaks."
         title="Online Timer"
       >
-        <OnlineTimer />
+        <DynamicOnlineTimer />
       </ToolLayout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd([
         { question: "Can the timer notify me when finished?", answer: "Yes. Enable browser notifications and vClock can show a completion notification." },

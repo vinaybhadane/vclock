@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import Script from "next/script";
 import { AdSlot } from "@/components/ad-slot";
 import { cn } from "@/lib/utils";
 
@@ -38,29 +37,21 @@ export function AdsenseUnit({
   }
 
   return (
-    <>
-      <Script
-        async
-        crossOrigin="anonymous"
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisherId}`}
-        strategy="lazyOnload"
+    <aside
+      aria-label={label}
+      className={cn(
+        "overflow-hidden rounded-lg border border-border bg-card p-2 shadow-sm",
+        className,
+      )}
+    >
+      <ins
+        className="adsbygoogle"
+        data-ad-client={publisherId}
+        data-ad-format="auto"
+        data-ad-slot={slot}
+        data-full-width-responsive="true"
+        style={{ display: "block" }}
       />
-      <aside
-        aria-label={label}
-        className={cn(
-          "overflow-hidden rounded-lg border border-border bg-card p-2 shadow-sm",
-          className,
-        )}
-      >
-        <ins
-          className="adsbygoogle"
-          data-ad-client={publisherId}
-          data-ad-format="auto"
-          data-ad-slot={slot}
-          data-full-width-responsive="true"
-          style={{ display: "block" }}
-        />
-      </aside>
-    </>
+    </aside>
   );
 }

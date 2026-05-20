@@ -27,7 +27,7 @@ export function pageMetadata({
       type: "website",
       images: [
         {
-          url: "/opengraph-image",
+          url: "https://vclock.tech/og-image.png",
           width: 1200,
           height: 630,
           alt: `${title} on vClock`,
@@ -40,7 +40,7 @@ export function pageMetadata({
       description,
       images: [
         {
-          url: "/twitter-image",
+          url: "https://vclock.tech/og-image.png",
           width: 1200,
           height: 630,
           alt: `${title} on vClock`,
